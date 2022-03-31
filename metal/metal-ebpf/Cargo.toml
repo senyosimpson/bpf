@@ -1,0 +1,19 @@
+[package]
+name = "metal-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya-bpf = { git = "https://github.com/aya-rs/aya", tag = "aya-v0.10.7" }
+memoffset = "0.6.5"
+metal-common = { path = "../metal-common" }
+
+[[bin]]
+name = "metal"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
+
+[workspace]
+members = []

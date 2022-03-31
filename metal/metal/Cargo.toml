@@ -1,0 +1,19 @@
+[package]
+name = "metal"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya =  { git = "https://github.com/aya-rs/aya", tag = "aya-v0.10.7", features = ["async_tokio"] }
+metal-common = { path = "../metal-common", features=["user"] }
+anyhow = "1.0.42"
+bytes = "1"
+log = "0.4"
+simplelog = "0.11"
+structopt = { version = "0.3" }
+tokio = { version = "1.5.0", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+
+[[bin]]
+name = "metal"
+path = "src/main.rs"
