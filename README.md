@@ -1,2 +1,2 @@
 # bpf
-Learning BPF fun for fun and profit
+Learning BPF for fun and profit
