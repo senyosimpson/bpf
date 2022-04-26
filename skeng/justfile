@@ -1,0 +1,17 @@
+@default:
+  just --list
+
+# bpf:
+#   sudo ./target/debug/skeng
+
+compile:
+  cargo xtask build-ebpf
+
+run:
+  cargo xtask run
+
+bindings:
+  cargo xtask codegen
+
+compile-and-run:
+  cargo xtask build-ebpf && cargo xtask run
